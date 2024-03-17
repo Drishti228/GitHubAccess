@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email to GitHub Redirect</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add EmailJS script -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("iCgLXfCyYkxl0HqBq");
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi, Let's Connect!</h1>
+        <form id="emailForm">
+            <input type="text" id="from_name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="What are some books you've read? If they match my interest, let's connect." required></textarea>
+            <input type="text" id="thoughts" placeholder="Any thoughts about anything?" required>
+            <button type="submit">Github</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
