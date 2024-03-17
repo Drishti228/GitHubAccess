@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Add a subtle background animation for a dynamic feel */
+    animation: gradient 5s ease-in-out infinite;
+    /* Ensure the body has a relative position so the pseudo-elements are positioned relative to it */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the pseudo-elements are behind the content */
+    /* Wavy background structure */
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.5) 25%, transparent 25%) -50px 0,
+                linear-gradient(225deg, rgba(173, 216, 230, 0.5) 25%, transparent 25%) -50px 0,
+                linear-gradient(315deg, rgba(173, 216, 230, 0.5) 25%, transparent 25%),
+                linear-gradient(45deg, rgba(173, 216, 230, 0.5) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-position: 0 0, 0 50px, 50px -50px, -50px 0px;
+}
+
+/* Removed the dark blue border */
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle animation for a dynamic feel */
+    animation: fadeIn 1s ease-in-out;
+    /* Ensure the container is centered within the body */
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Ensure the container does not exceed a certain width */
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+h1 {
+    color: #000080;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Use Georgia font */
+    font-size: 2.5em; /* Make the font big */
+    font-weight: bold; /* Make the font bold */
+    /* Add a hover effect for a dynamic feel */
+    transition: color 0.3s ease-in-out;
+}
+
+h1:hover {
+    color: #0000ff;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #000080;
+    transition: border-color 0.3s ease-in-out;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+    border-color: #0000ff;
+}
+
+button {
+    background-color: #000080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px #000080;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0000ff;
+    box-shadow: 0 3px #000080;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white; /* Match the container background color */
+    color: #000080; /* Text color */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em; /* Adjust font size as needed */
+}
